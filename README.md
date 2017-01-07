@@ -1,0 +1,2 @@
+# hackerRankCubeSummation
+C++ Solution
