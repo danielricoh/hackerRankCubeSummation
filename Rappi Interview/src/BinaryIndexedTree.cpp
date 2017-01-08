@@ -1,18 +1,36 @@
 #include "BinaryIndexedTree.h"
+#include "utils.h"
+#include<iostream>
 
 BinaryIndexedTree::BinaryIndexedTree(int n){
-    biTree.assign(n + 1, 0);
+    biTree.resize(n+1, std::vector<std::vector<long long> >(n+1, std::vector<long long>(n+1)));
 }
 
-int BinaryIndexedTree::query(int x1, int y1, int z1, int x2, int y2, int z2){
-    //TODO
-    return 0;
+long long BinaryIndexedTree::query(int x1, int y1, int z1, int x2, int y2, int z2){
+    return query(x2,y2,z2) - query(x1-1,y1-1,z1-1);
 }
-void BinaryIndexedTree::update(int x, int y, int z, int W){
-    //TODO
+void BinaryIndexedTree::update(int x, int y, int z, long long W){
+    for( ; z < (int)biTree.size(); z+= Utils::LSOne(z)) {
+        for( int y1 = y; y1 < (int)biTree.size(); y1+= Utils::LSOne(y1)) {
+            for( int x1 = x; x1 < (int)biTree.size(); x1+= Utils::LSOne(x1)) {
+                biTree[x1][y1][z] += W;
+            }
+        }
+    }
 }
 
-int BinaryIndexedTree::query(int x, int y, int z){
-    //TODO
-    return 0;
+long long BinaryIndexedTree::query(int x, int y, int z){
+    long long result = 0;
+    for( ; z ; z-= Utils::LSOne(z)) {
+        for( int y1 = y; y1 ; y1-= Utils::LSOne(y1)) {
+            for( int x1 = x; x1 ; x1-= Utils::LSOne(x1)) {
+                result+= biTree[x1][y1][z];
+            }
+        }
+    }
+    return result;
+}
+
+long long BinaryIndexedTree::getValue(int x, int y, int z){
+    return biTree[x][y][z];
 }
