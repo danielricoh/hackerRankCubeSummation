@@ -1,10 +1,18 @@
 # depslib dependency file v1.0
-1483835277 source:c:\users\ffdaniel\documents\rappi\hackerrankcubesummation\rappi interview\main.cpp
+1483837881 source:c:\users\ffdaniel\documents\rappi\hackerrankcubesummation\rappi interview\main.cpp
 	<iostream>
-	"utils.h"
+	"BinaryIndexedTree.h"
 
 1483835344 c:\users\ffdaniel\documents\rappi\hackerrankcubesummation\rappi interview\utils.h
 
 1483836118 source:c:\users\ffdaniel\documents\rappi\hackerrankcubesummation\rappi interview\utils.cpp
 	"utils.h"
+
+1483837876 c:\users\ffdaniel\documents\rappi\hackerrankcubesummation\rappi interview\include\binaryindexedtree.h
+	<vector>
+
+1483836307 source:c:\users\ffdaniel\documents\rappi\hackerrankcubesummation\rappi interview\src\utils.cpp
+	"utils.h"
+
+1483835344 c:\users\ffdaniel\documents\rappi\hackerrankcubesummation\rappi interview\include\utils.h
 

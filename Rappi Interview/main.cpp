@@ -1,4 +1,5 @@
 #include<iostream>
+#include "BinaryIndexedTree.h"
 using namespace std;
 
 int main(){
@@ -7,7 +8,7 @@ int main(){
     while(T--){
         int N=0,M=0;
         cin>>N>>M;
-        //TODO Create Binary Indexed Tree 3D with size N+1, Max N = 100, each point has default value 0
+        BinaryIndexedTree biTree(N);
         while(M--){
             string operationName = "";
             cin>>operationName;
