@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1483835277 source:c:\users\ffdaniel\documents\rappi\hackerrankcubesummation\rappi interview\main.cpp
+	<iostream>
+	"utils.h"
+
+1483835344 c:\users\ffdaniel\documents\rappi\hackerrankcubesummation\rappi interview\utils.h
+
+1483836118 source:c:\users\ffdaniel\documents\rappi\hackerrankcubesummation\rappi interview\utils.cpp
+	"utils.h"
+
